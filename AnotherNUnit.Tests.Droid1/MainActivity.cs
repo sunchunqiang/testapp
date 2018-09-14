@@ -26,8 +26,8 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using NUnit.Runner.Services;
- 
-namespace NUnit.Tests.Droid
+
+namespace AnotherNUnit.Tests.Droid1
 {
     [Activity(Label = "NUnit", Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.Light", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
@@ -42,7 +42,7 @@ namespace NUnit.Tests.Droid
             var nunit = new NUnit.Runner.App();
 
             // If you want to add tests in another assembly
-           
+            //nunit.AddTestAssembly(typeof(MyTests).Assembly);
 
             // Available options for testing
             nunit.Options = new TestOptions

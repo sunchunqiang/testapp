@@ -9,6 +9,11 @@
     <Import_RootNamespace>basetestprj</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+     
     <Compile Include="$(MSBuildThisFileDirectory)TestClass1.cs" />
+ 
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)class\**" />
   </ItemGroup>
 </Project>
