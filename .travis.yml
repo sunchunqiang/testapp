@@ -12,7 +12,11 @@ before_install:
 script: bash test.sh
 
 before_deploy:
-
+- python  test.py deploy1
+- python  test.py deploy2
+- python  test.py deploy3
+- python  test.py deploy4
+- python  test.py deploy5
 deploy:
 #- provider: releases
 
