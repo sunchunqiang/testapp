@@ -20,11 +20,11 @@ stages:
 jobs:
   include:
     - stage: deploy1
-      script:python  test.py deploy1
+      script:python  test.py deploy11
     - stage: deploy2
-      script:python  test.py deploy2    
+      script:python  test.py deploy21    
     - stage: deploy3
-      script:python  test.py deploy3
+      script:python  test.py deploy31
     - stage: deploy4
-      script:python  test.py deploy4
+      script:python  test.py deploy41
 # tags: true    
