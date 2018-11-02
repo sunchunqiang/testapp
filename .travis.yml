@@ -22,10 +22,5 @@ deploy:
   
   on:
     repo: sunchunqiang/testapp
- - provider: script
-  script: 
-    - python  test.py test2
-  on:
-    repo: sunchunqiang/testapp   
-    
+
 # tags: true    
