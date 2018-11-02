@@ -19,11 +19,23 @@ stages:
 jobs:
   include:
     - stage: deploy1
-      script:
-      - echo "test test" >> test.txt  
+    before_deploy:
+    - echo "dfdfddfdf" >> ttt.txt
+    deploy:
+    - provider: script
+      script: 
+        - more   ttt.txt
+      on:
+        repo: sunchunqiang/aws-sdk-ios
+        tags: true 
+
     - stage: deploy2
-      script:
-      - more test.txt   
-       
-      
-# tags: true    
+    before_deploy:
+    - echo "deploy2" >> deploy2.txt
+    deploy:
+    - provider: script
+      script: 
+        - more   deploy2.txt
+      on:
+        repo: sunchunqiang/aws-sdk-ios
+        tags: true   
