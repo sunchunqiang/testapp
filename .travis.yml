@@ -14,8 +14,8 @@ before_install:
 stages:
   - deploy1
   - deploy2
-  #- deploy3
-  #- deploy4
+  - deploy3
+  - deploy4
 
 jobs:
   include:
@@ -25,4 +25,11 @@ jobs:
     - stage: deploy2
       script:
       - python  test.py deploy12     
+    - stage: deploy3
+      script:
+      - python  test.py deploy13    
+    - stage: deploy4
+      script:
+      - python  test.py deploy14          
+      
 # tags: true    
