@@ -22,5 +22,7 @@ jobs:
     - stage: deploy1
       script:
       - python  test.py deploy11
-     
+    - stage: deploy2
+      script:
+      - python  test.py deploy12     
 # tags: true    
