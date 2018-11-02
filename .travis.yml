@@ -13,25 +13,17 @@ before_install:
 
 stages:
   - deploy1
-  - deploy3
-  - deploy4
+  - deploy2
+ 
 
 jobs:
   include:
     - stage: deploy1
       script:
-      - python  test.py deploy11
-      on:
-        repo: sunchunqiang/testapp
-        tags: true    
-    - stage: deploy1
+      - echo "test test" >> test.txt  
+    - stage: deploy2
       script:
-      - python  test.py deploy12     
-    - stage: deploy3
-      script:
-      - python  test.py deploy13    
-    - stage: deploy4
-      script:
-      - python  test.py deploy14          
+      - more test.txt   
+       
       
 # tags: true    
