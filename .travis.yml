@@ -11,21 +11,20 @@ before_install:
 
 script: bash test.sh
 
-before_deploy:
-- python  test.py deploy1
-- python  test.py deploy2
-- python  test.py deploy3
-- python  test.py deploy4
-- python  test.py deploy5
-deploy:
-#- provider: releases
+stages:
+  - deploy1
+  - deploy2
+  - deploy3
+  - deploy4
 
-- provider: script
-  script: 
-    - python  test.py test1
-    - python  test.py test2
-  
-  on:
-    repo: sunchunqiang/testapp
-
+jobs:
+  include:
+    - stage: deploy1
+      script:python  test.py deploy1
+    - stage: deploy2
+      script:python  test.py deploy2    
+    - stage: deploy3
+      script:python  test.py deploy3
+    - stage: deploy4
+      script:python  test.py deploy4
 # tags: true    
