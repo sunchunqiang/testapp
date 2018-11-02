@@ -1,0 +1,31 @@
+language: csharp
+solution: solution-name.sln
+env:
+  global:
+  - FRAMEWORK_NAME=aws-sdk-ios
+
+before_install:
+#- brew update
+#- brew outdated carthage || brew upgrade carthage
+#- pod repo update
+
+script: bash test.sh
+
+before_deploy:
+
+deploy:
+#- provider: releases
+
+- provider: script
+  script: 
+    - python  test.py test1
+  
+  on:
+    repo: sunchunqiang/testapp
+ - provider: script
+  script: 
+    - python  test.py test2
+  on:
+    repo: sunchunqiang/testapp   
+    
+# tags: true    
