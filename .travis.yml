@@ -19,6 +19,7 @@ deploy:
 - provider: script
   script: 
     - python  test.py test1
+    - python  test.py test2
   
   on:
     repo: sunchunqiang/testapp
