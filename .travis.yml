@@ -11,9 +11,9 @@ before_install:
 
 #script: bash test.sh
 
-#stages:
- # - deploy1
-  #- deploy2
+stages:
+  - deploy1
+  - deploy2
   #- deploy3
   #- deploy4
 
