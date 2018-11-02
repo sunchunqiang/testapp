@@ -9,22 +9,18 @@ before_install:
 #- brew outdated carthage || brew upgrade carthage
 #- pod repo update
 
-script: bash test.sh
+#script: bash test.sh
 
-stages:
-  - deploy1
-  - deploy2
-  - deploy3
-  - deploy4
+#stages:
+ # - deploy1
+  #- deploy2
+  #- deploy3
+  #- deploy4
 
 jobs:
   include:
     - stage: deploy1
-      script:python  test.py deploy11
-    - stage: deploy2
-      script:python  test.py deploy21    
-    - stage: deploy3
-      script:python  test.py deploy31
-    - stage: deploy4
-      script:python  test.py deploy41
+      script:
+      - python  test.py deploy11
+     
 # tags: true    
