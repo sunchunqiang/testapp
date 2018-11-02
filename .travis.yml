@@ -13,7 +13,6 @@ before_install:
 
 stages:
   - deploy1
-  - deploy2
   - deploy3
   - deploy4
 
@@ -25,7 +24,7 @@ jobs:
       on:
         repo: sunchunqiang/testapp
         tags: true    
-    - stage: deploy2
+    - stage: deploy1
       script:
       - python  test.py deploy12     
     - stage: deploy3
