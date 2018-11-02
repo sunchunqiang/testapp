@@ -22,7 +22,9 @@ jobs:
     - stage: deploy1
       script:
       - python  test.py deploy11
-      tags:true
+      on:
+        repo: sunchunqiang/testapp
+        tags: true    
     - stage: deploy2
       script:
       - python  test.py deploy12     
